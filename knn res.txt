@@ -1,0 +1,59 @@
+KNN Classifier Outputu
+
+Run information:
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 9 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     salary
+Instances:    32561
+Attributes:   15
+              age
+              workclass
+              fnlwgt
+              education
+              education-num
+              marital-status
+              occupation
+              relationship
+              race
+              sex
+              capital-gain
+              capital-loss
+              hours-per-week
+              native-country
+              salary
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 9 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       27090               83.1977 %
+Incorrectly Classified Instances      5471               16.8023 %
+Kappa statistic                          0.5194
+Mean absolute error                      0.214 
+Root mean squared error                  0.3442
+Relative absolute error                 58.5256 %
+Root relative squared error             80.4997 %
+Total Number of Instances            32561     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.910    0.413    0.874      0.910    0.892      0.521    0.867     0.940      <=50K
+                 0.587    0.090    0.673      0.587    0.627      0.521    0.867     0.658      >50K
+Weighted Avg.    0.832    0.335    0.826      0.832    0.828      0.521    0.867     0.872     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 22487  2233 |     a =  <=50K
+  3238  4603 |     b =  >50K

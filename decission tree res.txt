@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     salary
+Instances:    32561
+Attributes:   15
+              age
+              workclass
+              fnlwgt
+              education
+              education-num
+              marital-status
+              occupation
+              relationship
+              race
+              sex
+              capital-gain
+              capital-loss
+              hours-per-week
+              native-country
+              salary
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Number of Leaves  : 	719
+
+Size of the tree : 	901
+
+
+Time taken to build model: 1.3 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       28073               86.2166 %
+Incorrectly Classified Instances      4488               13.7834 %
+Kappa statistic                          0.6001
+Mean absolute error                      0.1926
+Root mean squared error                  0.3208
+Relative absolute error                 52.6676 %
+Root relative squared error             75.0233 %
+Total Number of Instances            32561     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.936    0.370    0.889      0.936    0.912      0.604    0.889     0.946      <=50K
+                 0.630    0.064    0.757      0.630    0.688      0.604    0.889     0.746      >50K
+Weighted Avg.    0.862    0.296    0.857      0.862    0.858      0.604    0.889     0.898     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 23134  1586 |     a =  <=50K
+  2902  4939 |     b =  >50K
